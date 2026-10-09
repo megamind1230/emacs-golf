@@ -38,3 +38,13 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `eeeLs`
+Setup: vanilla,  meow mode
+Explanation: move to select the word `brown` then select the trailing space with `L` then `s` to delete selection
+
+Solution: `M-f M-f M-d`
+Setup: vanilla, cursor at the beginning of the line
+Explanation: move forward 2 words, then delete 1 word

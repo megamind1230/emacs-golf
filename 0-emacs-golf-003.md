@@ -58,3 +58,14 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+
+## Solutions
+
+Solution: `M-g g 12 RET`
+Setup: vanilla
+Explanation: just go to line 12
+
+Solution: `Q12 RET [lg`
+Setup: meow mode
+Explanation: `Q12 RET` to go to line 12 but sadly it puts cursor to the end, `[l` to go to start of line, `g` to cancel selection ... ig there are better

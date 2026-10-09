@@ -38,14 +38,16 @@ Explanation:
 
 May the shortest sequence win.
 
-Solution: M-f C-f C-t M-f C-f C-t
+## Solutions
+
+Solution: `M-f C-f C-t M-f C-f C-t`
 Setup: vanilla
 Explanation: just moving and transposing
 
-Solution:F3 M-f C-f C-t F4 C-x e
+Solution: `F3 M-f C-f C-t F4 C-x e`
 Setup: vanilla
 Explanation: simple macro
 
-Solution: M-f C-d C-f SPC C-e C-b C-b C-d
+Solution: `M-f C-d C-f SPC C-e C-b C-b C-d`
 Setup: vanilla
 Explanation: delete and write spaces

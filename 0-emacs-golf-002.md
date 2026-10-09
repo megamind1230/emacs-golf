@@ -39,3 +39,13 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `v really RET e Ls`
+Setup: meow-mode
+Explanation: `v really RET e` select the 2nd really, `L` also select trailing space, `s` delete selection
+
+Solution: `v really RET e sd`
+Setup: meow-mode
+Explanation: `v really RET e` select the 2nd really, `s` delete selection {only word}, `d` delete 1 more character {which is the space}
