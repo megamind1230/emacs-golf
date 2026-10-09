@@ -69,3 +69,11 @@ Explanation: just go to line 12
 Solution: `Q12 RET [lg`
 Setup: meow mode
 Explanation: `Q12 RET` to go to line 12 but sadly it puts cursor to the end, `[l` to go to start of line, `g` to cancel selection ... ig there are better
+
+Solution: `C-u 11 C-n`
+Setup: vanilla
+Explanation:
+
+Solution: `M-1 M-1 C-n`
+Setup: vanilla
+Explanation:
