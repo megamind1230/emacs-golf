@@ -1,0 +1,534 @@
+* emacs golf daily on reddit
+** challenges
+** 2. Challenge ideas
+*** A. Basic editing and navigation
+**** 01 --- The Word Assassin
+
+Starting text: =The quick brown fox jumps over the lazy dog.=
+
+Delete =brown= without deleting either surrounding word.
+
+**** 02 --- Sentence Surgery
+
+Change =I really really like Emacs.= to =I really like Emacs.= Delete
+only the second =really=.
+
+**** 03 --- The Line Hopper
+
+Move from the beginning of line 1 to the beginning of line 12 in a fixed
+20-line buffer.
+
+**** 04 --- Punctuation Surgery
+
+Transform =Hello ,world != into =Hello, world!=.
+
+**** 05 --- Duplicate Trouble
+
+Given =apple banana cherry=, duplicate the entire line immediately below
+it.
+
+**** 06 --- End of the World
+
+From the start of a 100-line buffer, jump to the final character of the
+final line.
+
+**** 07 --- Line Exterminator
+
+Delete the current line, including its newline, without leaving an empty
+line behind.
+
+**** 08 --- Finders Keepers
+
+Jump to the third occurrence of =Emacs= in a paragraph, starting at the
+beginning.
+
+*** B. Multi-line transformations
+These are particularly good for distinguishing basic editing skills from
+more advanced Emacs techniques.
+
+| ​#  | Challenge           | Required transformation                                                 |
+|----+---------------------+-------------------------------------------------------------------------|
+| 09 | Reverse Order       | Reverse the order of five lines.                                        |
+| 10 | Alphabet Soup       | Sort a list of ten words alphabetically.                                |
+| 11 | Number Cruncher     | Prefix ten lines with =1.= through =10.= .                              |
+| 12 | Prefix Parade       | Add =TODO:= to every line in a region.                                  |
+| 13 | Suffix Parade       | Append =;= to every line in a region.                                   |
+| 14 | The Great Indent    | Indent ten lines by exactly four spaces.                                |
+| 15 | Empty Promises      | Remove all blank lines from a buffer.                                   |
+| 16 | The Duplicate Purge | Remove duplicate lines while preserving the first occurrence.           |
+| 17 | Case Closed         | Convert every occurrence of =emacs= to =Emacs=.                         |
+| 18 | Swap Meet           | Swap two adjacent blocks of five lines without changing their contents. |
+
+*** C. Search and replace
+This category tests incremental search, query replacement, regexes, and
+batch editing.
+
+| ​#  | Challenge                 | Required transformation                                                               |
+|----+---------------------------+---------------------------------------------------------------------------------------|
+| 19 | Global Domination         | Replace every =foo= with =bar=.                                                       |
+| 20 | Word Boundaries           | Replace =cat= with =dog=, but leave =category= unchanged.                             |
+| 21 | The Regex Monster         | Replace every sequence of three or more spaces with one space.                        |
+| 22 | Selective Destruction     | Delete every line containing =DEBUG=.                                                 |
+| 23 | Case-Insensitive Assassin | Replace =emacs=, =Emacs=, and =EMACS= with =editor=.                                  |
+| 24 | Number Reaper             | Replace every integer in a region with =N=.                                           |
+| 25 | Parenthesis Hunt          | Find the matching closing parenthesis from a given opening parenthesis.               |
+| 26 | The Missing Word          | Find the first word that occurs twice consecutively and delete the second occurrence. |
+
+*** D. Emacs-specific power moves
+These are where the competition can become distinct from traditional Vim
+Golf.
+
+| ​#  | Challenge                 | Required transformation                                                                                      |
+|----+---------------------------+--------------------------------------------------------------------------------------------------------------|
+| 27 | Macro Machine             | Apply a repeated edit to 20 lines using a keyboard macro.                                                    |
+| 28 | Rectangle Wizard          | Replace a rectangular block of text with spaces while preserving surrounding text.                           |
+| 29 | Register Roulette         | Copy a block to a register and insert it at three specified positions.                                       |
+| 30 | Mark My Words             | Select an exact region using only navigation and mark operations.                                            |
+| 31 | The Kill Ring             | Move a sentence to another location using kill/yank operations.                                              |
+| 32 | Narrow Escape             | Restrict editing to a function, change its contents, then restore the full buffer.                           |
+| 33 | Multiple Personalities    | Change five separate occurrences of a word simultaneously using multiple cursors or an equivalent technique. |
+| 34 | The Undo Maze             | Undo the last three logical edits without undoing an earlier edit.                                           |
+| 35 | The Recursive Rabbit Hole | Perform a temporary recursive edit, make a change, and return to the original editing context.               |
+| 36 | The Invisible Hand        | Make the required change without manually navigating to the target location.                                 |
+
+*** E. Programming challenges
+Use fixed code snippets so that the resulting output can be compared
+exactly.
+
+| ​#  | Challenge           | Required transformation                                                             |
+|----+---------------------+-------------------------------------------------------------------------------------|
+| 37 | Bracket Balancing   | Add missing parentheses to a given Lisp expression.                                 |
+| 38 | Function Relocation | Move one complete function above another without changing either function.          |
+| 39 | Import Cleanup      | Sort and remove duplicate import statements.                                        |
+| 40 | Rename Refactor     | Rename a variable throughout a function without changing similarly named variables. |
+| 41 | Comment Commander   | Comment out a selected block of code, then uncomment it.                            |
+| 42 | The Argument Swap   | Swap the first and second arguments of a specified function call.                   |
+| 43 | JSON Janitor        | Reformat compact JSON into a specified indentation style.                           |
+| 44 | The One-Liner       | Convert a five-line function into a single line while preserving its behavior.      |
+
+*** F. Buffers, windows, and navigation
+These challenges extend beyond manipulating characters.
+
+| ​#  | Challenge              | Required transformation                                                       |
+|----+------------------------+-------------------------------------------------------------------------------|
+| 45 | Window Tetris          | Create two side-by-side windows displaying different buffers.                 |
+| 46 | Buffer Teleport        | Switch to a named buffer in the fewest keystrokes.                            |
+| 47 | The Split Decision     | Split the current window horizontally, then display a specified buffer below. |
+| 48 | The Return Journey     | Jump to a file location, then return to the exact original position.          |
+| 49 | File Explorer Speedrun | Open a specified file from a known directory using the fewest keystrokes.     |
+| 50 | The Buffer Cleaner     | Kill all buffers except the current one.                                      |
+
+*** G. Elisp and automation
+Because everything is allowed, some challenges should explicitly invite
+solutions that exploit the programmability of Emacs.
+
+|  ​# | Challenge                       | Required transformation                                                                                                  |
+|----+---------------------------------+--------------------------------------------------------------------------------------------------------------------------|
+| 51 | One Expression to Rule Them All | Transform a 20-line buffer with one Elisp expression.                                                                    |
+| 52 | Define Your Destiny             | Write the shortest interactive command that performs a specified edit.                                                   |
+| 53 | Self-Binding                    | Bind a command to a key and use it to solve a task.                                                                      |
+| 54 | The Evaluator                   | Use =eval-expression= or another evaluation mechanism to transform a buffer.                                             |
+| 55 | The Tiny Transducer             | Write an Elisp function that converts =first_name= into =First Name=.                                                    |
+| 56 | The Universal Fix               | Create a command that fixes three different formatting mistakes in one buffer.                                           |
+| 57 | The One-Key Challenge           | Solve a multi-step editing task with one invocation of a custom command.                                                 |
+| 58 | The Golfed Function             | Implement a specified transformation in the fewest Elisp characters.                                                     |
+| 59 | The External Force              | Use an external tool, such as =sed=, =awk=, or Python, to perform a buffer transformation.                               |
+| 60 | The Ultimate Cheat              | Solve any earlier challenge using a custom function, macro, or package and compare it with the shortest native solution. |
+
+These are starter ideas rather than rigid specifications. Before
+publishing each challenge, define the initial buffer, cursor position,
+desired final state, and scoring rules precisely.
+
+** 3. How people should comment their answers
+This is probably the most important part. You want comments to be easy
+to compare, reproduce, and learn from --- not just screenshots of
+someone typing =M-x= and claiming victory.
+
+I'd use a standard comment template like this:
+
+Writing
+
+*Solution:* =C-a C-k C-y=
+
+*Keystrokes:* 3 *Commands:* 3 *Method:* Vanilla Emacs *Setup required:*
+None
+
+*Explanation:* Go to the beginning of the line, kill it, then yank it
+back.
+
+*Tested on:* GNU Emacs 30.2, Linux
+
+*Golfed by:* u/example
+
+The numbers and explanation above are illustrative; each participant
+should count their actual solution.
+
+*** Recommended comment format
+Ask everyone to include these fields:
+
+- Solution: The exact sequence of keys or commands.
+
+- Score: The number of keystrokes according to the challenge's rules.
+
+- Method: Vanilla Emacs, Evil, Meow, macros, Elisp, external tools, etc.
+
+- Setup: Any custom keybindings, functions, packages, or configuration
+  required.
+
+- Explanation: A short description of how the solution works.
+
+- Proof: Optional recording, screenshot, or reproducible test.
+
+For Elisp solutions, use a separate format:
+
+Writing
+
+*Solution:*
+
+#+begin_example
+(delete-duplicate-lines)
+#+end_example
+
+*Elisp length:* 23 characters *Invocations:* 1 *Requirements:* Command
+available in the current Emacs setup.
+
+*Explanation:* Describe what the expression does and any assumptions.
+
+*Verified:* Yes / No
+
+The code here is only a format example, not a guarantee that the
+expression implements any particular challenge.
+
+Important: Don't force all submissions into one scoring system. A
+three-keystroke macro invocation and a 40-character Elisp function are
+measuring different things.
+
+** 4. Rules for the subreddit
+I'd publish a short ruleset with every challenge.
+
+** Emacs Golf rules
+1. Everything is allowed. Vanilla Emacs, Evil, Meow, packages, custom
+   functions, macros, registers, shell commands, and external programs
+   are permitted unless a challenge explicitly defines a separate
+   category.
+
+2. The final result must be correct. The buffer or Emacs state must
+   match the specified target exactly.
+
+3. State the starting conditions. Every challenge must define the
+   initial text, point position, active mode, and any relevant state.
+
+4. Disclose prerequisites. If a solution requires a custom binding or
+   installed package, include it.
+
+5. Report honest scores. Count the solution according to the posted
+   metric. Don't omit setup steps that are part of the measured run.
+
+6. No restriction on cleverness. Built-ins, regexes, macros, code
+   evaluation, and custom commands are all legitimate solutions.
+
+7. Correctness beats brevity. A shorter solution that breaks the text or
+   misses an occurrence loses to a correct one.
+
+8. Improvement is encouraged. Reply to another person's solution with a
+   shorter or more interesting alternative.
+
+One nuance: I'd distinguish between setup and execution. Installing a
+package or defining a function can be excluded from the execution score
+if declared in advance. Otherwise, someone could hide an arbitrarily
+complicated solution in their init file and claim a one-key victory.
+That is still allowed under your rules --- it just belongs on the
+custom-setup leaderboard.
+
+** 5. A scoring system that rewards different kinds of golfers
+Rather than maintaining one leaderboard, I'd have several.
+
+| Leaderboard    | What counts                                                     |
+|----------------+-----------------------------------------------------------------|
+| Pure Golf      | Fewest key events under the challenge's stated convention       |
+| Elisp Golf     | Shortest working Elisp source                                   |
+| Macro Golf     | Fewest execution keystrokes using a declared macro              |
+| Clever Golf    | Community votes for the most ingenious solution                 |
+| Practical Golf | Best balance of brevity, readability, and real-world usefulness |
+| Anything Goes  | Any correct solution, with its technique disclosed              |
+
+You could also add a Vanilla Emacs category for people who want to learn
+the built-in editor, but don't make it the default restriction.
+
+I'd explicitly define how to count modifier keys. My preference is to
+count each key event as one stroke, including chords such as =C-a= and
+=M-f= as one stroke each, and to report any multi-key sequences
+separately if necessary. That keeps scoring simple and avoids debates
+about how long someone physically holds Ctrl.
+
+** 6. A ready-to-post first Reddit challenge
+Here's how I'd launch the idea on a subreddit such as r/emacs.
+
+Emacs Golf #001 --- Delete the Word
+
+** exmaple Emacs Golf #001 --- Delete the Word
+Welcome to *Emacs Golf*, a challenge series inspired by Vim Golf.
+
+The goal: complete the editing task using the fewest keystrokes
+possible.
+
+** The challenge
+Starting buffer:
+
+#+begin_example
+The quick brown fox jumps over the lazy dog.
+#+end_example
+
+Your cursor is at the beginning of the line.
+
+Target buffer:
+
+#+begin_example
+The quick fox jumps over the lazy dog.
+#+end_example
+
+Delete =brown= , including its trailing space, without changing anything
+else.
+
+** Rules
+- Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros,
+  Elisp, custom keybindings, and external tools.
+
+- Your solution must produce the exact target buffer.
+
+- State any setup or custom configuration your solution requires.
+
+- Count execution keystrokes, not the time it took you to configure
+  Emacs.
+
+- Use one key event per stroke; a chord such as =C-a= counts as one
+  stroke.
+
+- If your solution uses a macro or custom command, disclose it.
+
+- Bonus points for an elegant solution that teaches people something
+  new.
+
+** How to submit
+#+begin_example
+Solution:
+Score:
+Method:
+Setup:
+Explanation:
+#+end_example
+
+You can post multiple solutions if you find different approaches.
+
+*The goal isn't to prove that one editing style is superior. It's to
+discover how many different ways Emacs can solve the same problem.*
+
+What's your score?
+
+May the shortest sequence win.
+
+** features
+*** done
+- [X] Fast text editing
+- [X] Multiple cursors
+- [X] Rectangular selections
+- [X] Search within a file
+- [X] Replace within a file
+- [X] Regex search/replace
+- [X] Column/block editing
+- [X] Jump quickly to any line
+- [X] Recent files
+- [X] Autosave
+- [X] Quickly jump between words
+- [X] Quickly jump between paragraphs
+- [X] Jump to beginning/end of line
+- [X] Jump to beginning/end of file
+- [X] Jump between matching brackets
+- [X] Jump to matching HTML/XML tags
+- [X] Calendar view
+- [X] Insert images
+- [X] Resize/display images inline
+- [X] Tables with spreadsheet-like formulas
+- [X] Unified task dashboard
+- [X] See today's tasks
+- [X] See this week's tasks
+- [X] See overdue tasks
+- [X] Export notes to HTML
+- [X] Export notes to Markdown
+- [X] Export notes to LaTeX
+- [X] Create plain text notes
+- [X] Markdown notes
+- [X] org notes
+- [X] Nested headings
+- [X] Collapsible sections
+- [X] Task lists
+- [X] Checkboxes
+- [X] Task states
+- [X] Recurring tasks
+- [X] Deadlines
+- [X] Scheduled tasks
+- [X] Tags
+- [X] RSS reader
+
+*** not done
+- [ ] Undo/redo history
+- [ ] Unlimited undo tree
+- [ ] Search across an entire project
+- [ ] Search and replace across multiple files
+- [ ] Jump to symbols/functions
+
+- [ ] Navigate backward/forward through locations
+- [ ] Persistent bookmarks
+- [ ] Crash recovery
+- [ ] Auto-reload changed files
+- [ ] Jump to definition
+- [ ] Jump back from definition
+- [ ] Find references
+- [ ] Jump between headings
+- [ ] Jump between files
+- [ ] Quick file switcher
+- [ ] Fuzzy finding
+- [ ] Search everything with one command
+- [ ] Preview search results before opening
+- [ ] Open files in splits from search results
+- [ ] Navigate using keyboard only
+- [ ] Navigate using mouse if desired
+- [ ] Remember cursor position in files
+- [ ] Jump to previous edit location
+- [ ] Code editing
+- [ ] [@41] Syntax highlighting
+- [ ] Semantic syntax highlighting
+- [ ] Code completion
+- [ ] Snippet expansion
+- [ ] Function documentation on hover
+- [ ] Parameter hints
+- [ ] Auto-import suggestions
+- [ ] Automatic formatting
+- [ ] Format only selected code
+- [ ] Linting
+- [ ] Error highlighting
+- [ ] Jump to compiler errors
+- [ ] Code actions
+- [ ] Rename symbol everywhere
+- [ ] Extract function
+- [ ] Refactoring support
+- [ ] Code folding
+- [ ] Outline of functions/classes
+- [ ] Breadcrumb navigation
+- [ ] Git blame for a line
+- [ ] Project management
+- [ ] [@61] Recognize projects automatically
+- [ ] Switch between projects
+- [ ] Search project files
+- [ ] Run project commands
+- [ ] Build a project
+- [ ] Compile code
+- [ ] Run tests
+- [ ] Debug programs
+- [ ] Integrated terminal
+- [ ] Multiple terminals
+- [ ] Terminal inside splits
+- [ ] File explorer
+- [ ] Rename/move files
+- [ ] Bulk rename files
+- [ ] Remote file editing
+- [ ] Edit files over SSH
+- [ ] Edit files as sudo
+- [ ] Project-specific settings
+- [ ] Project task runner
+- [ ] Multiple workspaces/projects
+- [ ] Git
+- [ ] [@81] See Git status
+- [ ] Stage files
+- [ ] Unstage files
+- [ ] Commit changes
+- [ ] Push/pull
+- [ ] View Git history
+- [ ] View file history
+- [ ] View line history
+- [ ] Create branches
+- [ ] Switch branches
+- [ ] Merge branches
+- [ ] Resolve merge conflicts
+- [ ] Interactive rebase
+- [ ] Git diff inside editor
+- [ ] See changed lines in gutter
+- [ ] Restore previous file versions
+- [ ] Git worktrees support
+- [ ] GitHub integration
+- [ ] GitHub PR interaction
+- [ ] Do almost everything without leaving the editor
+- [ ] Custom task workflows
+- [ ] Priorities
+- [ ] Hierarchical tags/categories
+- [ ] Search notes
+- [ ] Full-text search
+- [ ] Search by tags
+- [ ] Quick note capture
+- [ ] Inbox for random thoughts
+- [ ] Knowledge management / second brain
+- [ ] [@121] Link one note to another
+- [ ] Backlinks
+- [ ] Automatic backlinks
+- [ ] Bidirectional links
+- [ ] Knowledge graph
+- [ ] Daily notes
+- [ ] Weekly notes
+- [ ] Monthly/yearly reviews
+- [ ] Unique IDs for notes
+- [ ] Automatic note filenames
+- [ ] Tags inside filenames
+- [ ] Search by note metadata
+- [ ] Note templates
+- [ ] Journal system
+- [ ] Zettelkasten workflow
+- [ ] Permanent notes
+- [ ] Fleeting notes
+- [ ] Literature notes
+- [ ] Link notes to source files
+- [ ] Knowledge graph visualization
+- [ ] Read PDFs
+- [ ] Highlight PDFs
+- [ ] Annotate PDFs
+- [ ] Link PDF annotations to notes
+- [ ] Manage bibliography
+- [ ] Citation insertion
+- [ ] Search academic papers
+- [ ] Store references
+- [ ] Read EPUB files
+- [ ] Save web links
+- [ ] Read webpages in Emacs
+- [ ] Capture webpage content into notes
+- [ ] Read emails
+- [ ] Manage emails
+- [ ] Open external files directly from notes
+- [ ] Embed source code in notes
+- [ ] Run source code from notes
+- [ ] Store research notes next to code
+- [ ] Create reproducible research documents
+- [ ] Spell checking
+- [ ] Grammar checking
+- [ ] Word completion
+- [ ] Dictionary lookup
+- [ ] Thesaurus lookup
+- [ ] Word count
+- [ ] Distraction-free writing
+- [ ] Focus on current paragraph
+- [ ] Typewriter scrolling
+- [ ] Export notes to PDF
+- [ ] Create presentations from notes
+- [ ] Publish a website from notes
+- [ ] Blog from notes
+- [ ] Habit tracking
+- [ ] Time tracking
+- [ ] Pomodoro timer
+- [ ] Notifications/reminders
+- [ ] Daily planning
+- [ ] Weekly review workflow
+- [ ] Custom dashboards
+- [ ] Capture an idea from anywhere
+- [ ] Automatically organize captured information
+- [ ] Integrate with external calendars
+- [ ] Track projects and their tasks
+- [ ] Kanban boards
+- [ ] Habit + task + calendar in one system
