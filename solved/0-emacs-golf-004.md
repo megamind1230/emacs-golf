@@ -48,6 +48,14 @@ Solution: `F3 M-f C-f C-t F4 C-x e`
 Setup: vanilla
 Explanation: simple macro
 
+solution: `F3 M-f C-f C-t F4 F4` (6 inputs)
+setup: vanilla
+explanation: `F4` runs the defined macro, no need to `C-x e`
+
+Solution: `M-f C-d C-f SPC C-e C-b C-b C-d`
+Setup: vanilla
+Explanation: delete and write spaces
+
 Solution: `M-f C-d C-f SPC C-e C-b C-b C-d`
 Setup: vanilla
 Explanation: delete and write spaces
