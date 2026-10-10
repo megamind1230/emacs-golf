@@ -1,5 +1,5 @@
-# Emacs Golf #019 — Global Domination
-**Category:** C. Search and replace
+# Emacs Golf #015 — Empty Promises
+**Category:** B. Multi-line transformations
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,10 +7,11 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-foo bar foo
-baz foo
-qux
-foofoo foo
+first
+
+second
+
+third
 ```
 
 Point: beginning of line 1
@@ -18,14 +19,13 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-bar bar bar
-baz bar
-qux
-barbar bar
+first
+second
+third
 ```
 
 ## Task
-Replace every `foo` with `bar`.
+Remove all blank lines from the buffer.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -45,3 +45,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `C-x h M-x flush-lines ^$ RET`
+Setup: vanilla
+Explanation: `C-x h` select whole buffer, invoke flush-lines function with regex `^$` as argument to delete empty lines

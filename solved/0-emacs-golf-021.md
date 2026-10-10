@@ -43,3 +43,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-x replace-regex SPC+ RET SPC`
+Setup: vanilla
+Explanation: `SPC+` for one or more spaces

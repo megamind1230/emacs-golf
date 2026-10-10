@@ -1,5 +1,5 @@
-# Emacs Golf #007 — Line Exterminator
-**Category:** A. Basic editing and navigation
+# Emacs Golf #010 — Alphabet Soup
+**Category:** B. Multi-line transformations
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,26 +7,37 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-first
-second
-third
-fourth
-fifth
+pear
+apple
+mango
+banana
+cherry
+date
+elderberry
+fig
+grape
+kiwi
 ```
 
-Point: line 3 (`third`)
+Point: beginning of line 1
 
 Target buffer:
 
 ```
-first
-second
-fourth
-fifth
+apple
+banana
+cherry
+date
+elderberry
+fig
+grape
+kiwi
+mango
+pear
 ```
 
 ## Task
-Delete the current line including its newline. No empty line may be left behind.
+Sort the ten words alphabetically.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -46,3 +57,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-x sort-lines`
+Setup: vanilla
+Explanation:

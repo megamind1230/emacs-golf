@@ -1,4 +1,4 @@
-# Emacs Golf #013 — Suffix Parade
+# Emacs Golf #018 — Swap Meet
 **Category:** B. Multi-line transformations
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,9 +7,16 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-let x = 1
-let y = 2
-return x + y
+b1
+b2
+b3
+b4
+b5
+a1
+a2
+a3
+a4
+a5
 ```
 
 Point: beginning of line 1
@@ -17,13 +24,20 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-let x = 1;
-let y = 2;
-return x + y;
+a1
+a2
+a3
+a4
+a5
+b1
+b2
+b3
+b4
+b5
 ```
 
 ## Task
-Append `;` to every line.
+Swap the two adjacent blocks of five lines without changing their contents.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -43,3 +57,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `x4s ]bp`
+Setup: meow-mode
+Explanation: `x4s` select first 5 lines, `]b` move to end of buffer, `p` to paste

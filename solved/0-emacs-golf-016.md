@@ -1,4 +1,4 @@
-# Emacs Golf #018 — Swap Meet
+# Emacs Golf #016 — The Duplicate Purge
 **Category:** B. Multi-line transformations
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,16 +7,13 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-a1
-a2
-a3
-a4
-a5
-b1
-b2
-b3
-b4
-b5
+apple
+banana
+apple
+cherry
+banana
+date
+cherry
 ```
 
 Point: beginning of line 1
@@ -24,20 +21,14 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-b1
-b2
-b3
-b4
-b5
-a1
-a2
-a3
-a4
-a5
+apple
+banana
+cherry
+date
 ```
 
 ## Task
-Swap the two adjacent blocks of five lines without changing their contents.
+Remove duplicate lines, preserving the first occurrence of each.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -57,3 +48,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-h M-x delete-duplicate-lines`
+Setup: vanilla
+Explanation:

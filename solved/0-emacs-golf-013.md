@@ -1,4 +1,4 @@
-# Emacs Golf #015 — Empty Promises
+# Emacs Golf #013 — Suffix Parade
 **Category:** B. Multi-line transformations
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,11 +7,9 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-first
-
-second
-
-third
+let x = 1
+let y = 2
+return x + y
 ```
 
 Point: beginning of line 1
@@ -19,13 +17,13 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-first
-second
-third
+let x = 1;
+let y = 2;
+return x + y;
 ```
 
 ## Task
-Remove all blank lines from the buffer.
+Append `;` to every line.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -45,3 +43,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-h ; H M-x replace-regex RET $ RET ;`
+Setup: vanilla + meow-mode
+Explanation:

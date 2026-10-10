@@ -1,5 +1,5 @@
-# Emacs Golf #012 — Prefix Parade
-**Category:** B. Multi-line transformations
+# Emacs Golf #020 — Word Boundaries
+**Category:** C. Search and replace
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,10 +7,9 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-write the report
-review the patches
-merge the branch
-cut the release
+cat category catlike
+the cat sat
+concatenate
 ```
 
 Point: beginning of line 1
@@ -18,14 +17,13 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-TODO: write the report
-TODO: review the patches
-TODO: merge the branch
-TODO: cut the release
+dog category catlike
+the dog sat
+concatenate
 ```
 
 ## Task
-Add `TODO:` to every line in the buffer.
+Replace `cat` with `dog`, but leave `category`, `catlike` and `concatenate` untouched.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -45,3 +43,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-% cat SPC RET dog SPC RET !`
+Setup: vanilla
+Explanation: that's a workaround, not a real solution, cuz we didn't do anything related to bounds

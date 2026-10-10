@@ -1,4 +1,4 @@
-# Emacs Golf #016 — The Duplicate Purge
+# Emacs Golf #012 — Prefix Parade
 **Category:** B. Multi-line transformations
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,13 +7,10 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-apple
-banana
-apple
-cherry
-banana
-date
-cherry
+write the report
+review the patches
+merge the branch
+cut the release
 ```
 
 Point: beginning of line 1
@@ -21,14 +18,14 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-apple
-banana
-cherry
-date
+TODO: write the report
+TODO: review the patches
+TODO: merge the branch
+TODO: cut the release
 ```
 
 ## Task
-Remove duplicate lines, preserving the first occurrence of each.
+prefix every line with `TODO:`
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -48,3 +45,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-h ; H M-x replace-regex RET ^ RET TODO: SPC`
+Setup: vanilla + meow-mode
+Explanation: `M-h ;` select paragraph then reverse the cursor to the other bound, `H` step back 1 char {now cursor is at the end of line 4} , do a regular expression replace

@@ -59,3 +59,7 @@ Explanation: delete and write spaces
 Solution: `M-f C-d C-f SPC C-e C-b C-b C-d`
 Setup: vanilla
 Explanation: delete and write spaces
+
+Solution: `t, C-t wd`
+Setup: meow-mode
+Explanation: Til comma, transpose, end of word, delete

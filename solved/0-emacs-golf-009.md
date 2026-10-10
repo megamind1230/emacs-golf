@@ -1,4 +1,4 @@
-# Emacs Golf #010 — Alphabet Soup
+# Emacs Golf #009 — Reverse Order
 **Category:** B. Multi-line transformations
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,16 +7,11 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-pear
-apple
-mango
-banana
-cherry
-date
-elderberry
-fig
-grape
-kiwi
+one
+two
+three
+four
+five
 ```
 
 Point: beginning of line 1
@@ -24,20 +19,15 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-apple
-banana
-cherry
-date
-elderberry
-fig
-grape
-kiwi
-mango
-pear
+five
+four
+three
+two
+one
 ```
 
 ## Task
-Sort the ten words alphabetically.
+Reverse the order of the five lines.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -57,3 +47,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-h reverse-region`
+Setup: vanilla
+Explanation:

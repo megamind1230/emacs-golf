@@ -1,5 +1,5 @@
-# Emacs Golf #014 — The Great Indent
-**Category:** B. Multi-line transformations
+# Emacs Golf #022 — Selective Destruction
+**Category:** C. Search and replace
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,16 +7,11 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-step one
-step two
-step three
-step four
-step five
-step six
-step seven
-step eight
-step nine
-step ten
+INFO ready
+DEBUG loading config
+TRACE entering loop
+DEBUG value = 42
+DONE
 ```
 
 Point: beginning of line 1
@@ -24,20 +19,13 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-    step one
-    step two
-    step three
-    step four
-    step five
-    step six
-    step seven
-    step eight
-    step nine
-    step ten
+INFO ready
+TRACE entering loop
+DONE
 ```
 
 ## Task
-Indent all ten lines by exactly four spaces.
+Delete every line containing `DEBUG`.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -57,3 +45,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-x flush-lines DEBUG RET`
+Setup:
+Explanation: deletes lines containing `DEBUG` word

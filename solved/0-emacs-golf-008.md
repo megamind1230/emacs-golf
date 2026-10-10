@@ -1,5 +1,5 @@
-# Emacs Golf #017 — Case Closed
-**Category:** B. Multi-line transformations
+# Emacs Golf #008 — Finders Keepers
+**Category:** A. Basic editing and navigation
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,23 +7,15 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-emacs is great
-we love emacs
-emacs rocks
+Emacs is a great editor. Emacs is extensible. Emacs ships with Org mode. Even Vim fans admit Emacs is deep.
 ```
 
 Point: beginning of line 1
 
-Target buffer:
-
-```
-Emacs is great
-we love Emacs
-Emacs rocks
-```
+Goal: Point sits on the E of the third occurrence of Emacs (Emacs ships). Buffer text untouched.
 
 ## Task
-Convert every occurrence of `emacs` to `Emacs`.
+Find the third occurrence of `Emacs` starting from the top.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -43,3 +35,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `v Emacs nnb g`
+Setup: meow-mode
+Explanation: visit Emacs, `nn` to skip the 3rd next one, `b` move backwards to its start, `g` to deselect

@@ -1,5 +1,5 @@
-# Emacs Golf #020 — Word Boundaries
-**Category:** C. Search and replace
+# Emacs Golf #017 — Case Closed
+**Category:** B. Multi-line transformations
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,9 +7,9 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-cat category catlike
-the cat sat
-concatenate
+emacs is great
+we love emacs
+emacs rocks
 ```
 
 Point: beginning of line 1
@@ -17,13 +17,13 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-dog category doglike
-the dog sat
-concatenate
+Emacs is great
+we love Emacs
+Emacs rocks
 ```
 
 ## Task
-Replace `cat` with `dog`, but leave `category`, `catlike` and `concatenate` untouched.
+Convert every occurrence of `emacs` to `Emacs`.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -43,3 +43,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-% emacs RET Emacs RET !`
+Setup: vanilla
+Explanation: query-replace emacs into Emacs, `!` don't prompt/ask more questions

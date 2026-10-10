@@ -1,5 +1,5 @@
-# Emacs Golf #008 — Finders Keepers
-**Category:** A. Basic editing and navigation
+# Emacs Golf #014 — The Great Indent
+**Category:** B. Multi-line transformations
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,19 +7,37 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-Emacs is a great editor. Emacs is extensible. Emacs ships with Org mode. Even Vim fans admit Emacs is deep.
+step one
+step two
+step three
+step four
+step five
+step six
+step seven
+step eight
+step nine
+step ten
 ```
 
 Point: beginning of line 1
 
-Goal:
+Target buffer:
 
 ```
-Point sits on the E of the third occurrence of Emacs (Emacs ships). Buffer text untouched.
+    step one
+    step two
+    step three
+    step four
+    step five
+    step six
+    step seven
+    step eight
+    step nine
+    step ten
 ```
 
 ## Task
-Find the third occurrence of `Emacs` starting from the top.
+Indent all ten lines by exactly four spaces.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -39,3 +57,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-h C-x TAB right right right right`
+Setup: vanilla
+Explanation: `M-h` select paragraph, `C-x TAB` indent-rigidly function, `right` 4 times for 4 spaces

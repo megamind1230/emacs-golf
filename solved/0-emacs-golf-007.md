@@ -1,5 +1,5 @@
-# Emacs Golf #009 — Reverse Order
-**Category:** B. Multi-line transformations
+# Emacs Golf #007 — Line Exterminator
+**Category:** A. Basic editing and navigation
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,27 +7,26 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-one
-two
-three
-four
-five
+first
+second
+third
+fourth
+fifth
 ```
 
-Point: beginning of line 1
+Point: line 3 (`third`)
 
 Target buffer:
 
 ```
-five
-four
-three
-two
-one
+first
+second
+fourth
+fifth
 ```
 
 ## Task
-Reverse the order of the five lines.
+Delete the current line including its newline. No empty line may be left behind.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -47,3 +46,13 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `C-a C-k C-k`
+Setup: vanilla
+Explanation: `C-a` just in case cursor isn't in the start of the line, kill till end of line, then kill newline char
+
+Solution: `C-SPC C-n C-w`
+Setup: meow-mode
+Explanation: set mark {select}, move to beginning of next line, kill selection

@@ -1,4 +1,4 @@
-# Emacs Golf #022 — Selective Destruction
+# Emacs Golf #019 — Global Domination
 **Category:** C. Search and replace
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,11 +7,10 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-INFO ready
-DEBUG loading config
-TRACE entering loop
-DEBUG value = 42
-DONE
+foo bar foo
+baz foo
+qux
+foofoo foo
 ```
 
 Point: beginning of line 1
@@ -19,13 +18,14 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-INFO ready
-TRACE entering loop
-DONE
+bar bar bar
+baz bar
+qux
+barbar bar
 ```
 
 ## Task
-Delete every line containing `DEBUG`.
+Replace every `foo` with `bar`.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -45,3 +45,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-% foo RET bar RET !`
+Setup:
+Explanation:

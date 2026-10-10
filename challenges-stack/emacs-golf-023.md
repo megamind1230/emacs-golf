@@ -23,7 +23,7 @@ editor FOREVER
 ```
 
 ## Task
-Replace `emacs`, `Emacs` and `EMACS` with `editor`.
+Replace `emacs`, `Emacs` and `EMACS`regardless of the case with `editor`.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
