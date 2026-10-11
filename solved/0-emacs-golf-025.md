@@ -1,4 +1,4 @@
-# Emacs Golf #023 — Case-Insensitive Assassin
+# Emacs Golf #025 — Parenthesis Hunt
 **Category:** C. Search and replace
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,23 +7,19 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-I love emacs
-Emacs is great
-EMACS FOREVER
+(defun square (x) (* x x))
 ```
 
-Point: beginning of line 1
+Point: on the ` (` of `(* x x)` (column 19) · Mode: emacs-lisp-mode
 
-Target buffer:
+Goal:
 
 ```
-I love editor
-editor is great
-editor FOREVER
+Point sits on the matching )  that closes that opening parenthesis. Buffer text untouched.
 ```
 
 ## Task
-Replace `emacs`, `Emacs` and `EMACS`regardless of the case with `editor`.
+Jump to the matching closing parenthesis from the given opening one.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -43,3 +39,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `C-M-f`
+Setup:
+Explanation: [GNU Emacs FAQ](https://www.gnu.org/software/emacs/manual/html_mono/efaq.html#How-do-I-show-which-parenthesis-matches-the-one-I_0027m-looking-at_003f)

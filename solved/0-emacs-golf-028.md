@@ -18,7 +18,7 @@ Target buffer:
 
 ```
 The q     brown fox
-jumps     the lazy
+jumps     r the lazy
 dog e     day.
 ```
 
@@ -43,3 +43,17 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `fu C-v e jj r SPC`
+Setup: evil-mode
+Explanation: simple visual block mode motions
+
+Solution: `M-: (while (not (eobp)) (setq beg (progn (move-to-column (1- 6)) (point)) end (progn (move-to-column (1- 10)) (point))) (save-restriction (narrow-to-region beg end) (replace-region-contents beg end (make-string (length (buffer-substring-no-properties beg end)) ? ))) (beginning-of-line 2)) RET`
+Setup: vanilla
+Explanation: elisp code to mark in between the columns needed then replace the region with spaces
+
+Solution: `C-: ua C-x SPC M-f C-n C-n C-x r c`
+Setup: `avy-goto-char` + vanilla
+Explanation: `C-: ua` go to the `u` in quick, `C-x SPC` rectangle-mark-mode, `M-f C-n C-n` select the rectangle region, `C-x r c` clears rectangle.

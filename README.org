@@ -27,3 +27,5 @@ May the shortest sequence win.
 
 
 you can contact me on Telegram too: @NewPhoenixGuy
+
+=NOTE: THIS WORK OF ART IS BY A VARITY OF ENTHUSIASTIC EMACS USERS FROM VARIOUS EMACS COMMUNITIES, AND NOT ALL DONE BY ME=

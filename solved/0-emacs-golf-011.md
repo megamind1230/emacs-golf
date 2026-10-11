@@ -75,3 +75,11 @@ Explanation: create an org file, replace start of lines with `- ` then change li
 Solution: `C-x C-k C-c 1 RET F3 F3 . SPC C-n C-a F4 M-9 F4`
 Setup: vanilla
 Explanation: `C-x C-k C-c 1 RET` makes sure that kmacro counter is set to 1, `F3 F3 . SPC` places the first `1. `, `C-n C-a` start of next line, `F4` end macro, `M-9 F4` repeat macro 9 times.
+
+Solution: `M-: (dotimes (line (count-lines (point-min) (point-max))) (setq line (1+ line)) (insert (format "%d. " line)) (beginning-of-line 2))`
+Setup: vanilla
+Explanation: it's like a while loop but in elisp
+
+Solution: `M-h ; H C-M-% ^ RET \,(1+ \#). SPC RET !`
+Setup: vanilla
+Explanation: select desired region, replace start of line with incremental numbers {starting from 1} followed by `.`, replace all without asking

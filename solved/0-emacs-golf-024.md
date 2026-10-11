@@ -41,3 +41,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `C-M-% [0-9]+ RET N RET`
+Setup: vanilla
+Explanation: just regex

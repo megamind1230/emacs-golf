@@ -77,3 +77,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `<f3> .e G ee a SPC ESC R j <f4> M-1 M-9 <f4>`
+Setup: vanilla + meow-mode
+Explanation: record a macro, `.e G` grab first column {word}, `ee a SPC ESC` move after 2nd and insert space, `R` swap grabbed region with this place, `j` next line, end macro, repeat 19 more times
