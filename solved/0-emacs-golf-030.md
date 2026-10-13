@@ -1,4 +1,4 @@
-# Emacs Golf #031 — The Kill Ring
+# Emacs Golf #030 — Mark My Words
 **Category:** D. Emacs-specific power moves
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,25 +7,23 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-Emacs is powerful. It has Org mode. Learning it is fun.
-
-Notes:
-Remember to practice daily.
+alpha beta gamma
+delta epsilon
+zeta eta theta
+iota kappa
+lambda mu nu
 ```
 
 Point: beginning of line 1
 
-Target buffer:
+Goal:
 
 ```
-Emacs is powerful. Learning it is fun.
-
-Notes:
-Remember to practice daily. It has Org mode.
+An active region spans from the first character of line 2 (delta) to the end of line 3 (theta), not including line 3's newline. Buffer text untouched.
 ```
 
 ## Task
-Move the sentence `It has Org mode.` to the end of the buffer using kill/yank operations.
+Select that exact region using only navigation and mark operations.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -45,3 +43,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `jxx`
+Setup: meow-mode + vanilla
+Explanation:

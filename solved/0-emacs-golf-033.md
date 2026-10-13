@@ -1,4 +1,4 @@
-# Emacs Golf #032 — Narrow Escape
+# Emacs Golf #033 — Multiple Personalities
 **Category:** D. Emacs-specific power moves
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,29 +7,23 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-(defun add-one (n)
-  (setq n (+ n 1))
-  n)
-
-(defun shout (s)
-  (upcase s))
+color = color + color;
+print(color);
+log(color);
 ```
 
-Point: beginning of buffer · Mode: emacs-lisp-mode
+Point: beginning of line 1
 
 Target buffer:
 
 ```
-(defun add-one (n)
-  (setq n (+ n 1))
-  n)
-
-(defun shout (s)
-  (upcase (string-trim s)))
+colour = colour + colour;
+print(colour);
+log(colour);
 ```
 
 ## Task
-Restrict editing to the `shout` function, change `(upcase s)` to `(upcase (string-trim s))`, then restore the full buffer. The buffer must NOT be narrowed when you finish.
+Change all five occurrences of `color` to `colour`.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -49,3 +43,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-% color RET colour RET !`
+Setup: vanilla
+Explanation:

@@ -83,3 +83,7 @@ Explanation: it's like a while loop but in elisp
 Solution: `M-h ; H C-M-% ^ RET \,(1+ \#). SPC RET !`
 Setup: vanilla
 Explanation: select desired region, replace start of line with incremental numbers {starting from 1} followed by `.`, replace all without asking
+
+Solution: `<C-v>GI0. <Esc>gvg<C-a>`
+Setup: evil-mode
+Explanation: Visual mode selection over all lines, prepend with 0. and then just g C-a to make numbers increase ascendingly.

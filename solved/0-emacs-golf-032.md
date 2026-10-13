@@ -1,4 +1,4 @@
-# Emacs Golf #030 — Mark My Words
+# Emacs Golf #032 — Narrow Escape
 **Category:** D. Emacs-specific power moves
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,23 +7,29 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-alpha beta gamma
-delta epsilon
-zeta eta theta
-iota kappa
-lambda mu nu
+(defun add-one (n)
+  (setq n (+ n 1))
+  n)
+
+(defun shout (s)
+  (upcase s))
 ```
 
-Point: beginning of line 1
+Point: beginning of buffer · Mode: emacs-lisp-mode
 
-Goal:
+Target buffer:
 
 ```
-An active region spans from the first character of line 2 (delta) to the end of line 3 (theta), not including line 3's newline. Buffer text untouched.
+(defun add-one (n)
+  (setq n (+ n 1))
+  n)
+
+(defun shout (s)
+  (upcase (string-trim s)))
 ```
 
 ## Task
-Select that exact region using only navigation and mark operations.
+Restrict editing to the `shout` function, change `(upcase s)` to `(upcase (string-trim s))`, then restore the full buffer. The buffer must NOT be narrowed when you finish.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -43,3 +49,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-> C-x nd C-: sac(string-trim SPC s C-x nw M-<`
+Setup: meow-mode + vanilla + avy
+Explanation: just make sure you did `M-x emacs-lisp-mode` before you start

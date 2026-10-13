@@ -1,4 +1,4 @@
-# Emacs Golf #033 — Multiple Personalities
+# Emacs Golf #031 — The Kill Ring
 **Category:** D. Emacs-specific power moves
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,9 +7,10 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-color = color + color;
-print(color);
-log(color);
+Emacs is powerful. It has Org mode. Learning it is fun.
+
+Notes:
+Remember to practice daily.
 ```
 
 Point: beginning of line 1
@@ -17,13 +18,14 @@ Point: beginning of line 1
 Target buffer:
 
 ```
-colour = colour + colour;
-print(colour);
-log(colour);
+Emacs is powerful. Learning it is fun.
+
+Notes:
+Remember to practice daily. It has Org mode.
 ```
 
 ## Task
-Change all five occurrences of `color` to `colour`.
+Move the sentence `It has Org mode.` to the end of the buffer using kill/yank operations.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -43,3 +45,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `C-: is tLs M-> hi SPC ESC p`
+Setup: meow-mode + vanilla + avy
+Explanation:

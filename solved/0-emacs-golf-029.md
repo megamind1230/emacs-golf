@@ -51,3 +51,21 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution:`x C-x rsq C-M-% \^\^ RET C-x r i q RET !`
+Setup: meow-mode + vanilla
+Explanation:`x` select first line, `C-x rsq` copy to q register, regex replace `^^` with `insert whatever in register q`, `!` ask nothing
+
+Solution:`x C-x rsq M-% ^^ RET C-x riq RET !`
+Setup: meow-mode + vanilla
+Explanation: no need for regex replace
+
+Solution: `M-@ M-w C-M-% \^\^ RET C-y RET !`
+Setup: vanilla
+Explanation:
+
+Solution: `M-@ M-w M-% ^^ RET C-y RET !`
+Setup: vanilla
+Explanation:

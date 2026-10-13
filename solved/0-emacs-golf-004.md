@@ -63,3 +63,23 @@ Explanation: delete and write spaces
 Solution: `t, C-t wd`
 Setup: meow-mode
 Explanation: Til comma, transpose, end of word, delete
+
+Solution: `:%s/\s\([,!]\)/\1 /g RET M-x whitespace-cleanup`
+Setup: evil-mode
+Explanation: Regex match spaces followed by either , or ! characters, replace those with the matched character followed by a space, then call whitespace-cleanup to get rid of the training end of line (I mean you could also do that with another regex but whatever, lets do weird stuff)
+
+Solution: `wXp$X`
+Setup: evil-mode
+Explanation: Instead of using f SPC like others have done, use w and Xp transpose before cursor. Though, then have to use $ instead of ; to go to around !.
+
+Solution: `f SPC x p ; x p`
+Setup: evil-mode
+Explanation:
+
+Solution: `f SPC x p f SPC x`
+Setup: evil-mode
+Explanation:
+
+Solution: `M-: (let ((re (re-search-forward (rx "Hello " (group ",") "world" (group " !")))) (target "Hello, world!")) (when re (goto-char (match-beginning 1)) (delete-char 1) (goto-char (1- (point))) (insert ?,) (goto-char (match-beginning 2)) (delete-char 1) (cl-assert (string= (buffer-substring-no-properties (point-min) (point-max)) target))))`
+Setup: vanilla
+Explanation: Using re-search-forward to find the comma and the exclamation, (assuming you are in a buffer with only that text (without a newline)), and changing the buffer content, cl-assert is only to ensure it didn't fail lol

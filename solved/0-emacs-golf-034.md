@@ -39,3 +39,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-f M-d ma delta M-u M-3 C-/`
+Setup: vanilla + meow-mode
+Explanation: start with `alpha beta gamma`delete 2nd word {beta}, `ma delta` to add it to start of line, `M-u` to upcase-word {ALPHA}, undo 3 times

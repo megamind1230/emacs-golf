@@ -67,3 +67,7 @@ Explanation: just make sure at first to toggle off the case-replace into nil {so
 
 Solution: `2w*cgneditor<Esc>..`
 Setup: evil-mode with evil-search-module set to evil-search and evil-ex-search-case set to its default value of smart. Explanation: Executing `*` on the lowercase emacs string case-fold searches for all the strings to replace. After `cgn` to change the match it suffices to repeat it twice with `..`
+
+Solution: `M-: (while (re-search-forward (rx (or "E" "e") "macs") nil t) (replace-match "editor" t))`
+Setup: vanilla
+Explanation:
