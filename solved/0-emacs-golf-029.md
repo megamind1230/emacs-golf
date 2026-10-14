@@ -69,3 +69,30 @@ Explanation:
 Solution: `M-@ M-w M-% ^^ RET C-y RET !`
 Setup: vanilla
 Explanation:
+
+Solution: `yy:%s/\^\^/C-r"/g RET`
+Setup: evil-mode
+Explanation: maybe you can use `C-r +` too
+
+Solution:
+```
+M-% ^^ RET ; query-replace ^^
+C-t o      ; yank-thing-to-minibuffer, word. yanks the thing at point in
+           ; minibuffer-selected-window into the minibuffer
+RET a      ; perform replacement
+```
+Setup: conn.el
+Explanation:
+
+Solution:
+```
+C-SPC                  ;; set-mark-command
+ C-e                    ;; move-end-of-line
+ M-w                    ;; kill-ring-save
+ C-n                    ;; next-line
+ C-n                    ;; next-line
+ C-c C->                ;; mc/mark-all-dwim
+ C-y                    ;; yank
+```
+Setup: vanilla + multi-cursors.el
+Explanation:

@@ -1,4 +1,4 @@
-# Emacs Golf #039 — Import Cleanup
+# Emacs Golf #038 — Function Relocation
 **Category:** E. Programming challenges
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,27 +7,27 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-import os
-import sys
-import os
-import json
-import sys
-import re
+(defun b ()
+  (message "b"))
+
+(defun a ()
+  (message "a"))
 ```
 
-Point: beginning of line 1
+Point: beginning of buffer · Mode: emacs-lisp-mode
 
 Target buffer:
 
 ```
-import json
-import os
-import re
-import sys
+(defun a ()
+  (message "a"))
+
+(defun b ()
+  (message "b"))
 ```
 
 ## Task
-Sort the import statements and remove duplicates.
+swap the two functions
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -47,3 +47,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `]ds M-> C-j p`
+Setup: meow-mode
+Explanation:

@@ -1,4 +1,4 @@
-# Emacs Golf #037 — Bracket Balancing
+# Emacs Golf #040 — Rename Refactor
 **Category:** E. Programming challenges
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,19 +7,27 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-(+ 1 (* 2 3)
+(defun total (items)
+  (let ((total 0))
+    (dolist (i items)
+      (setq total (+ total i)))
+    total))
 ```
 
-Point: beginning of line 1 · Mode: emacs-lisp-mode
+Point: beginning of buffer · Mode: emacs-lisp-mode
 
 Target buffer:
 
 ```
-(+ 1 (* 2 3))
+(defun total (items)
+  (let ((acc 0))
+    (dolist (i items)
+      (setq acc (+ acc i)))
+    acc))
 ```
 
 ## Task
-Add the missing parenthesis so the expression is balanced.
+Rename the variable `total` to `acc` everywhere. The function name `total` must NOT change.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -39,3 +47,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `M-% total RET acc RET n!`
+Setup:
+Explanation: say no to first replacement, then do others

@@ -80,3 +80,26 @@ Explanation:
 Solution: `M-: (let* ((content (buffer-substring-no-properties (point-min) (point-max))) (times 0)) (dolist (strings (split-string content " ")) (save-excursion (while (re-search-forward strings nil t) (setq times (1+ times)))) (if (= times 2) (delete-region (match-beginning 0) (1+ (match-end 0))) (setq times 0)))) RET`
 Setup: vanilla
 Explanation:
+
+Solution: `e M-d e M-d`
+Setup: meow-mode
+Explanation:
+
+Solution: `M-d d v f RET M-d`
+Setup: meow-mode
+Explanation:
+
+Solution:
+```
+d f o     ; kill-thing, dispatch, word.
+          ;   dispatch places labels at each thing, similar to avy.
+          ;   when the label at a thing is selected the action is
+          ;   performed on that thing.  in this case the action is
+          ;   kill-thing and the thing is word.
+<mouse-1> ; select word to kill by left clicking on the second "the".
+          ;   labels may also be selected by clicking on the thing
+          ;   they are labeling.
+<mouse-3> ; repeat last dispatch at right click (on the second "fox")
+```
+Setup: using conn.el modal system [mtll/conn: Another modal keybinding mode for Emacs](https://github.com/mtll/conn)
+Explanation:

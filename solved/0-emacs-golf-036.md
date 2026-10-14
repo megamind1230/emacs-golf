@@ -117,3 +117,10 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+
+## Solutions
+
+Solution: `M-% word RET changed RET !`
+Setup:
+Explanation:
