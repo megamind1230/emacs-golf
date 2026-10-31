@@ -1,5 +1,5 @@
-# Emacs Golf #063 — End of Sentence
-**Category:** A. Basic editing and navigation
+# Emacs Golf #047 — The Split Decision
+**Category:** F. Buffers, windows, and navigation
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,19 +7,17 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-One. Two. Three. Four.
+One window showing `emacs-golf-047.md`. Buffer org-agenda of current week also exists(hidden)
 ```
-
-Point: beginning of line 1
 
 Goal:
 
 ```
-Point sits immediately after the period of Three.. Buffer text untouched.
+The window is split horizontally; the top window shows `emacs-golf-047.md`, the bottom shows the agenda.
 ```
 
 ## Task
-Travel to the end of the third sentence.
+Split and assign the buffers.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -39,3 +37,10 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+
+## Solutions
+
+Solution: `C-x 4 b or TAB`
+Setup: vanilla
+Explanation:

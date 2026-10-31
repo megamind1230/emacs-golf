@@ -1,5 +1,5 @@
-# Emacs Golf #043 — JSON Janitor
-**Category:** E. Programming challenges
+# Emacs Golf #050 — The Buffer Cleaner
+**Category:** F. Buffers, windows, and navigation
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,26 +7,17 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-{"name":"emacs","tags":["golf","org"],"ok":true}
+Buffers main (current), alpha, beta and gamma are open.
 ```
 
-Point: beginning of line 1
-
-Target buffer:
+Goal:
 
 ```
-{
-  "name": "emacs",
-  "tags": [
-    "golf",
-    "org"
-  ],
-  "ok": true
-}
+Only buffer main remains open and current.
 ```
 
 ## Task
-Reformat the compact JSON with two-space indentation exactly as shown.
+Kill every buffer except the current one.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -46,3 +37,10 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+
+## Solutions
+
+Solution: `C-x 1`
+Setup: vanilla
+Explanation:

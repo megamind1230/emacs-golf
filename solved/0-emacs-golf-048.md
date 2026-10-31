@@ -1,5 +1,5 @@
-# Emacs Golf #079 — Title Quest
-**Category:** C. Search and replace
+# Emacs Golf #048 — The Return Journey
+**Category:** F. Buffers, windows, and navigation
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,21 +7,28 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-the quick brown fox jumps
-over the lazy dog
+line 01
+line 02
+line 03
+line 04
+line 05
+line 06
+line 07
+line 08
+line 09
+line 10
 ```
 
-Point: beginning of buffer
+Point: line 7, column 4
 
-Target buffer:
+Goal:
 
 ```
-The Quick Brown Fox Jumps
-Over The Lazy Dog
+Point sits at line 7, column 4 again, having visited line 1, column 1 in between. Buffer text untouched.
 ```
 
 ## Task
-Title-case every word.
+Jump to the top of the buffer, then come back to the exact original position.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -41,3 +48,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `[bz`
+Setup: meow-mode
+Explanation:

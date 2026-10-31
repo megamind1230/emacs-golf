@@ -1,4 +1,4 @@
-# Emacs Golf #089 — The Unfill
+# Emacs Golf #044 — The One-Liner
 **Category:** E. Programming challenges
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,21 +7,21 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-Emacs is a powerful editor
-that can be configured to do
-almost anything.
+(defun double (x)
+  "Double X."
+  (* x 2))
 ```
 
-Point: beginning of buffer
+Point: beginning of buffer · Mode: emacs-lisp-mode
 
 Target buffer:
 
 ```
-Emacs is a powerful editor that can be configured to do almost anything.
+(defun double (x) "Double X." (* x 2))
 ```
 
 ## Task
-Unfill the hard-wrapped paragraph into a single line.
+Collapse the function onto a single line. The code itself must not change.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -41,3 +41,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `]b M-x join-line RET`
+Setup: vanilla + meow-mode
+Explanation:

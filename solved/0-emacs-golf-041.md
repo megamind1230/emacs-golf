@@ -1,4 +1,4 @@
-# Emacs Golf #091 — The Quiet Line
+# Emacs Golf #041 — Comment Commander
 **Category:** E. Programming challenges
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
@@ -7,21 +7,27 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-(+ 1 2) ; add them
-(* 3 4) ; multiply
+(defun greet (name)
+  (message "Hello, %s!" name))
+
+;; (defun farewell (name)
+;;   (message "Goodbye, %s!" name))
 ```
 
-Point: beginning of buffer · Mode: emacs-lisp-mode
+Point: line 1
 
 Target buffer:
 
 ```
-(+ 1 2)
-(* 3 4)
+;; (defun greet (name)
+;;   (message "Hello, %s!" name))
+
+(defun farewell (name)
+  (message "Goodbye, %s!" name))
 ```
 
 ## Task
-Strip the trailing comments, keep the code.
+swap the comments state of the these functions, make sure to have `emacs-lisp-mode` on.
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -41,3 +47,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `]d M-x comment-region RET ]d M-x uncomment-region RET`
+Setup: vanilla + meow-mode
+Explanation:

@@ -1,5 +1,5 @@
-# Emacs Golf #094 — Buffer Name Game
-**Category:** F. Buffers, windows, and navigation
+# Emacs Golf #043 — JSON Janitor
+**Category:** E. Programming challenges
 
 Welcome to **Emacs Golf** — fewest keystrokes wins.
 
@@ -7,17 +7,26 @@ Welcome to **Emacs Golf** — fewest keystrokes wins.
 Starting buffer:
 
 ```
-A buffer visiting old-notes.txt is current; its name is old-notes.txt.
+{"name":"emacs","tags":["golf","org"],"ok":true}
 ```
 
-Goal:
+Point: beginning of line 1
+
+Target buffer:
 
 ```
-The same buffer is now named golf-log (same content, same file, renamed buffer only).
+{
+  "name": "emacs",
+  "tags": [
+    "golf",
+    "org"
+  ],
+  "ok": true
+}
 ```
 
 ## Task
-Rename the current buffer.
+Reformat the compact JSON with two-space indentation exactly as shown. make sure you have `json-ts-mode` on
 
 ## Rules
 - Everything is allowed: vanilla Emacs, Evil, Meow, packages, macros, Elisp, custom keybindings, external tools.
@@ -37,3 +46,9 @@ Explanation:
 **The goal isn't to prove one editing style is superior. It's to discover how many different ways Emacs can solve the same problem.**
 
 May the shortest sequence win.
+
+## Solutions
+
+Solution: `x M-x json-pretty-print RET`
+Setup: meow-mode + vanilla
+Explanation:
