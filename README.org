@@ -1,3 +1,6 @@
+*** WE GOD 50 NOW!
+50 different quick games to get you used to using Emacs
+
 *** I hope this grows more
 Contribute by submitting more solutions, problem sets, fixing typos, or even adding new ideas we missing.
 
@@ -29,3 +32,5 @@ May the shortest sequence win.
 you can contact me on Telegram too: @NewPhoenixGuy
 
 =NOTE: THIS WORK OF ART IS BY A VARITY OF ENTHUSIASTIC EMACS USERS FROM VARIOUS EMACS COMMUNITIES, AND NOT ALL DONE BY ME=
+
+=YOUR FREE TO FORK, CLONE OR COPY ANYTHING=
